@@ -1,6 +1,6 @@
 # Teams Llama
 
-A Llama bot in Teams, where you can chat with your llama instance or add it to an existing channel with team members.
+A Llama bot in Teams allows you to chat directly with your Llama instance (or other Ollama models) and can also be added to an existing channel to interact with team members.
 
 This bot has been build upon the work of [rvinothrajendran](https://github.com/rvinothrajendran/PythonBotTeamAppDevelopment), 01EchoBot sample.
 
