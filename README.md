@@ -13,7 +13,7 @@ This bot has been build upon the work of [rvinothrajendran](https://github.com/r
 
 ## Instructions
 
-1. Run `git clone https://github.com/victornemeth/teamsllama && cd teamsllama`
+1. Run `git clone https://github.com/victornemeth/teamsllama.git && cd teamsllama`
 3. Run `docker compose up -d`
 4. Run `docker exec -it ollama ollama pull llama3.1:8b`
 
