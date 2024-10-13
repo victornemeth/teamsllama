@@ -1,0 +1,38 @@
+services:
+ollama:
+    volumes:
+      - ./ollama:/root/.ollama
+    container_name: ollama
+    pull_policy: always
+    tty: true
+    restart: unless-stopped
+    image: ollama/ollama:latest
+    ports:
+      - 7869:11434
+    environment:
+      - OLLAMA_KEEP_ALIVE=-1
+    networks:
+      - ollama-docker
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: -1
+              capabilities: [gpu]
+  bot:
+    build: .
+    container_name: teams-bot
+    networks:
+      - nginx-docker
+      - ollama-docker
+    ports:
+      - "3978:3978"
+    depends_on: ollama
+    restart: always
+
+networks:
+  nginx-docker: #to nginx
+    external: true
+  ollama-docker: #to ollama
+    internal: true

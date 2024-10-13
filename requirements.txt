@@ -1,0 +1,4 @@
+botbuilder-core>=4.7.0
+aiohttp
+langchain
+langchain_community
