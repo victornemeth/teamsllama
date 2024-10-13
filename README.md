@@ -3,7 +3,6 @@
 A Llama bot in Teams, where you can chat with your llama instance or add it to an existing channel with team members.
 
 This bot has been build upon the work of [rvinothrajendran](https://github.com/rvinothrajendran/PythonBotTeamAppDevelopment), 01EchoBot sample.
-This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to create a simple bot that accepts input from the user and echoes it back.
 
 ## Prerequisites
 
