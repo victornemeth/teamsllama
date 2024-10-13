@@ -24,3 +24,5 @@ This bot has been build upon the work of [rvinothrajendran](https://github.com/r
 7. Put in Domain Name
 8. Forward Hostname: teams-bot; Forward Port: 3978
 9. Force SSL
+10. Go to your Azure Portal, in the Azure Bot Channels, click **Open in Teams**
+11. Chat with your model
