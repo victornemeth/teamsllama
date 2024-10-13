@@ -31,8 +31,24 @@ ollama:
     depends_on: ollama
     restart: always
 
+  nginx:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    container_name: nginx
+    ports:
+      # These ports are in format <host-port>:<container-port>
+      - '80:80' # Public HTTP Port
+      - '443:443' # Public HTTPS Port
+      - '81:81' # Admin Web Port
+      # Add any other Stream port you want to expose
+    networks:
+      - nginx-docker
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+
 networks:
   nginx-docker: #to nginx
-    external: true
+    internal: true
   ollama-docker: #to ollama
     internal: true
